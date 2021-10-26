@@ -4,20 +4,24 @@
 // Prima di partire a scrivere codice poniamoci qualche domanda: Che ci sia un array da qualche parte? Se dobbiamo confrontare qualcosa che “cosa” ci serve?
 
 
-//numero generato dall'utente:
+let result = document.getElementById("result")
 
-var userNum = Math.floor(Math.random() * 6);
+let btn = document.getElementById("btn")
 
-console.log("user",userNum);
+btn.addEventListener("click",
+    function() {
+        //numero generato dall'utente:
+        var userNum = Math.floor(Math.random() * 6);
+        console.log("user",userNum);
 
-//numero generato dal computer
+        //numero generato dal computer
+        var pcNum = Math.floor(Math.random() * 6 + 1);
+        console.log("pc", pcNum);
 
-var pcNum = Math.floor(Math.random() * 6 + 1);
-
-console.log("pc", pcNum);
-
-if(userNum < pcNum) {
-    console.log("hai perso");
-} else {
-    console.log("hai vinto");
-}
+        if(userNum < pcNum) {
+            result.innerHTML = `Hai perso`;
+        } else {
+            result.innerHTML = `Hai vinto`;
+        }
+    }
+)
