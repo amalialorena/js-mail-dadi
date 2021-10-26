@@ -11,14 +11,14 @@ let answer = document.getElementById("answer");
 
 //Stampa un messaggio appropriato sull’esito del controllo.
 //Se l'utente non è nella mia lista, stampa "Spiacenti, l'indirizzo email non corrisponde a nessun utente" nella pagina
-// answer.innerHTML = "Spiacenti, l'indirizzo email non corrisponde a nessun utente";
+// answer.innerHTML = "Spiacenti, l'indirizzo email non corrisponde a nessun utente.";
 
 // // controlla che sia nella lista di chi può accedere (che hai fatto tu precedentemente), 
 
 // for(let i = 0; i < emailArr.length; i++) {
 //     if(userMail === emailArr[i]){
-//         //Se l'utente è nella mia lista stampa "L'indirizzo email è corretto"
-//        var right = "L'indirizzo email è corretto";
+//         //Se l'utente è nella mia lista stampa "L'indirizzo email è corretto."
+//        var right = "L'indirizzo email è corretto.";
 //        answer.innerHTML = right;
 //     }
 // }
@@ -34,9 +34,9 @@ for(let i = 0; i < emailArr.length; i++) {
     }
 
 if(result == true) {
-    console.log( "L'indirizzo email è corretto");
+     answer.append("L'indirizzo email è corretto.");
 }else{
-    console.log( "Spiacenti, l'indirizzo email non corrisponde a nessun utente");
+    answer.append( "Spiacenti, l'indirizzo email non corrisponde a nessun utente.");
 }
 
 
