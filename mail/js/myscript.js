@@ -9,14 +9,22 @@ let userMail = prompt("what's your email adress?");
 
 const emailArr = ["pinco@pallino.com", "pallino@pinco.com", "myname@email.com"];
 
+let answer = document.getElementById("answer");
 
 // controlla che sia nella lista di chi può accedere (che hai fatto tu precedentemente), 
 for(let i = 0; i < emailArr.length; i++) {
     if(userMail === emailArr[i]){
-        console.log("l'indirizzo mail è corretto")
-       } else{
-            console.log("Spiacenti, l'indirizzo mail non corrisponde a nessun utente")
-        }
+       var right = "L'indirizzo mail è corretto";
+       answer.append(right)
+    }
 }
 
+
+
+//Se l'utente non è nella mia lista, stampa "Spiacenti, l'indirizzo mail non corrisponde a nessun utente") nella pagina
+
+
+// console.log("Spiacenti, l'indirizzo mail non corrisponde a nessun utente");
+
 //stampa un messaggio appropriato sull’esito del controllo.
+
