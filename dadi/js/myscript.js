@@ -19,9 +19,11 @@ btn.addEventListener("click",
         console.log("pc", pcNum);
 
         if(userNum < pcNum) {
-            result.innerHTML = `Hai perso`;
+            result.innerHTML = `Hai perso, il tuo numero è ${userNum}, il numero del computer è ${pcNum}.`;
+        } else if (userNum > pcNum){
+            result.innerHTML = `Hai vinto, il tuo numero è ${userNum}, il numero del computer è ${pcNum}.`;
         } else {
-            result.innerHTML = `Hai vinto`;
+            result.innerHTML = `Il risultato è pari.`;
         }
     }
 )
