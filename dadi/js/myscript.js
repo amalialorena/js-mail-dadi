@@ -11,7 +11,7 @@ let btn = document.getElementById("btn")
 btn.addEventListener("click",
     function() {
         //numero generato dall'utente:
-        var userNum = Math.floor(Math.random() * 6);
+        var userNum = Math.floor(Math.random() * 6 + 1) ;
         console.log("user",userNum);
 
         //numero generato dal computer
